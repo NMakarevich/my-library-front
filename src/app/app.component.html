@@ -1,0 +1,23 @@
+<app-header [title]='title'></app-header>
+<div class='router-content'>
+  <ui-sidenav>
+    <ui-sidenav-drawer [uiDrawerWidth]='"250px"' class='sidenav-drawer'>
+      <nav class='nav'>
+        <ng-container *ngIf='isAuth' class='nav-list'>
+          <ui-nav-item routerLink='/' icon='home'>Home</ui-nav-item>
+          <ui-nav-item routerLink='authors' icon='people'>Authors</ui-nav-item>
+          <ui-nav-item routerLink='books' icon='library_books'>Books</ui-nav-item>
+          <ui-nav-item routerLink='profile' icon='account_circle'>Profile</ui-nav-item>
+          <ui-nav-item icon='logout'>Logout</ui-nav-item>
+        </ng-container>
+        <ng-container *ngIf='!isAuth' class='nav-list'>
+          <ui-nav-item class='nav-item' routerLink='/' icon='home'>Home</ui-nav-item>
+          <ui-nav-item class='nav-item' routerLink='login' icon='login'>Login</ui-nav-item>
+        </ng-container>
+      </nav>
+    </ui-sidenav-drawer>
+    <ui-sidenav-content>
+      <router-outlet></router-outlet>
+    </ui-sidenav-content>
+  </ui-sidenav>
+</div>
