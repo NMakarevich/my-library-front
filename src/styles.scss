@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html, body {
+body {
   height: 100%;
 }
 
@@ -14,7 +14,7 @@ html, body {
 }
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: 'Material Icons', serif;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;  /* Preferred icon size */
