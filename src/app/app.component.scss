@@ -6,4 +6,9 @@
 .nav {
   display: flex;
   flex-direction: column;
+  height: 100%;
+
+  &:last-child {
+    margin-top: auto;
+  }
 }
